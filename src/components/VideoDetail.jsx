@@ -3,9 +3,9 @@ import { Link, useParams } from "react-router-dom";
 import ReactPlayer from "react-player";
 import { Typography, Box, Stack } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-
-import { Videos, Loader } from "./";
+import Loader from './Loader'
 import { fetchFromAPI } from "../utils/fetchFromAPI";
+import Videos from "./Videos";
 
 const VideoDetail = () => {
   const [videoDetail, setVideoDetail] = useState(null);

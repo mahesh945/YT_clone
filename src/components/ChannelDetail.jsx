@@ -1,10 +1,10 @@
 import {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 
+import ChannelCard from './ChannelCard'
 import { Box } from "@mui/material";
-
-import { Videos, ChannelCard } from "./";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
+import Videos from './Videos';
 
 const ChannelDetail = () => {
   const [channelDetail, setChannelDetail] = useState();
