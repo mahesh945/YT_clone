@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { Paper, IconButton } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
+import Login from './Login';
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -17,14 +18,20 @@ const SearchBar = () => {
     }
   };
 
+  
+
   return (
+    <>
     <Paper
       component='form'
       onSubmit={onhandleSubmit}
       sx={{
         borderRadius: 20,
         border: '1px solid #e3e3e3',
+        display:'flex',
+        flex:1,
         pl: 2,
+        minWidth:0,
         boxShadow: 'none',
         mr: { sm: 5 },
       }}
@@ -38,7 +45,10 @@ const SearchBar = () => {
       <IconButton type='submit' sx={{ p: '10px', color: 'red' }} aria-label='search'>
         <SearchIcon />
       </IconButton>
+      
     </Paper>
+    <Login login ={''}/>
+    </>
   );
 };
 
