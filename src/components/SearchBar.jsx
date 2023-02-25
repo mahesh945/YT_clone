@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import { Paper, IconButton } from '@mui/material';
+import { Paper, IconButton, Button } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import Login from './Login';
+// import Login from './Login';
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -46,8 +46,12 @@ const SearchBar = () => {
         <SearchIcon />
       </IconButton>
       
+      
     </Paper>
-    <Login login ={''}/>
+    <Button className='sign-in'>
+      Sign in
+    </Button>
+    
     </>
   );
 };
